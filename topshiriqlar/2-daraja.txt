@@ -1,0 +1,11 @@
+1) Kabisa yilini hisoblash dasturi
+=======================================
+2) Uchburchak mavjudligini tekshiruvchi dastur. 
+Bunda uchburchak 3 ta tomoni tekshiriladi. 
+Istalgan 2 ta tomon yig'indisi 3-tomondan katta 
+bo'lsa bu uchburchak bo'ladi.
+=======================================
+3) Sonning raqamlar yig'indisini topish.
+Yordam: for dan foydalaning.
+=======================================
+4) 

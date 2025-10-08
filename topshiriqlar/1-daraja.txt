@@ -1,0 +1,13 @@
+1) 2 ta son yig'indisini topish. 
+Foydalanuvchi 2 ta son kiritadi ekranga 
+ular yig'indisi chiqarilsin.
+=======================================
+2) To'rtburchak yuzini hisoblash dasturi.
+Bunda a va b tomonlar kiritiladi. 
+S=a * b yordamida yuza hisoblanib ekranga 
+chiqariladi.
+========================================
+3) Haftalik maoshni hisoblash dasturi.
+Ishchi bir soat uchun s so'm oladi, u haftasiga h soat ishlaydi.
+Uning haftalik maoshini topuvchi dastur.
+Yordam: ...
