@@ -1,0 +1,19 @@
+============================
+1-topshiriq:
+
+10 ta istalgan mavzuda test tuzing. Bunda shrift 'Times New Roman', o'lchami 14 bo'lsin. 
+Test raqamlari va variantlari avtoraqamlash orqali qo'yilsin.
+List 2 ga bo'lingan tarzda bo'lsin. Ya'ni kolonki 2 bo'lsin. Barcha sahifalarda sahifa raqami bo'lsin.
+Iloji boricha hujjat chiroyli va tartibli chiqsin.
+=============================
+2-topshiriq:
+
+Oilamiz haqida jadval tuzish.
+Hamma xoxlaganicha o'z oilasi haqida jadval tuzsin.
+=============================
+
+3-topshiriq:
+
+Ishchi stoliga 3 ta papka ochib ularni har birini kamida 5 tadan rasmga to'ldiramiz. 
+Masalan futbol, mashinalar, tabiat deb papka yaratsangiz har biriga o'ziga xos rasmlar bilan to'ldiring.
+=============================
