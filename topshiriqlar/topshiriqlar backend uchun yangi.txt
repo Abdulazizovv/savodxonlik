@@ -1,0 +1,65 @@
+1. Oson darajadagi topshiriqlar (asosiy sintaksis va mantiq)
+
+Foydalanuvchidan ism va yoshini so‘rang, so‘ngra “Salom, {ism}! Siz {yosh} yoshdasiz.” degan natijani chiqaring.
+
+Foydalanuvchidan son kiritishini so‘rab, uni 2 ga ko‘paytiring va ekranga chiqaring.
+
+3 ta son kiritilsin, ularning o‘rtacha qiymatini hisoblang.
+
+Son manfiy, musbat yoki 0 ekanligini aniqlaydigan dastur yozing.
+
+1 dan 10 gacha bo‘lgan sonlarni ekranga chiqaring.
+
+Foydalanuvchidan matn oling, uning uzunligini chiqaring.
+
+Foydalanuvchi ismini 5 marta chiqaradigan dastur yozing (for bilan).
+
+Foydalanuvchidan son kiritilsin, shu sondan 1 gacha kamayib boruvchi sonlarni chiqaring (while bilan).
+
+Berilgan matnni teskari yozib chiqaring.
+
+Berilgan matnda nechta “a” harfi borligini hisoblang.
+
+🟡 2. O‘rta darajadagi topshiriqlar (sikl, shart, list, string kombinatsiyasi)
+
+Foydalanuvchidan 5 ta son kiritilsin, ularning yig‘indisini toping.
+
+1 dan 100 gacha bo‘lgan juft sonlarni ekranga chiqaring.
+
+Foydalanuvchidan matn oling, unda nechta unli harf borligini sanang.
+
+Berilgan sonning faktorialini hisoblang (while yoki for bilan).
+
+Berilgan matn palindrome (teskari o‘qiganda ham bir xil) ekanligini aniqlang.
+
+numbers = [1, 4, 7, 2, 9] ro‘yxatidagi eng katta va eng kichik sonni toping.
+
+names = ["Ali", "Vali", "Hasan", "Husan"] ro‘yxatini teskari tartibda chiqaring.
+
+Ro‘yxatdagi barcha sonlarning o‘rtacha qiymatini toping.
+
+Foydalanuvchidan 5 ta ism kiritilsin va ularni alfavit tartibida chiqaring.
+
+Ro‘yxatda nechta musbat va manfiy son borligini aniqlang.
+
+🔴 3. Qiyin darajadagi topshiriqlar (real amaliyotga yaqin kombinatsiyalar)
+
+Foydalanuvchidan son kiritilsin. Agar son 3 ga va 5 ga bo‘linsa — “FizzBuzz” yozing, faqat 3 ga bo‘linsa — “Fizz”, faqat 5 ga bo‘linsa — “Buzz”.
+
+Matndagi so‘zlar sonini aniqlovchi dastur yozing.
+
+Foydalanuvchidan 10 ta son kiritilsin, faqat juftlarini alohida ro‘yxatga joylang.
+
+grades = [67, 80, 90, 45, 56] ro‘yxatidan faqat 60 dan yuqori baholarni chiqaruvchi kod yozing.
+
+Matndan barcha bo‘sh joylarni olib tashlaydigan kod yozing.
+
+Foydalanuvchi parol kiritadi. Agar uzunligi 8 dan kam yoki raqam kiritilmagan bo‘lsa — “Parol kuchsiz”, aks holda “Parol kuchli” deb chiqaring.
+
+Foydalanuvchidan 5 ta son kiritilsin. Eng kichigini va eng kattasini topib, ularning farqini hisoblang.
+
+products = ["olma", "banan", "shaftoli", "olma", "nok"] — takrorlangan elementlarni faqat 1 marta chiqaruvchi dastur yozing.
+
+1 dan 100 gacha bo‘lgan sonlardan faqat 3 va 7 ga bo‘linadiganlarini ekranga chiqaring.
+
+Foydalanuvchidan matn oling va undagi eng uzun so‘zni aniqlang.
