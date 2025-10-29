@@ -1,0 +1,21 @@
+Savodxonlik uchun topshiriqlar:
+
+===============================
+1-topshiriq:
+
+2 ta listdan iborat hujjat yaratamiz. 1-sahifaga
+o'zimiz haqimizda ma'lumot.
+2-sahifada sevimli mashg'ulot(hobbi)lar jadvalini
+yaratamiz va to'ldiramiz.
+Talablar:
+Hujjat nomi: men haqimda
+Shrift turi: Times New Roman
+Shrift o'lchami: 14
+Matnlar ikkala chetga tekislangan bo'lsin.
+Sahifalarda sahifa raqamlari bo'lsin.
+Bu hujjatni pdf formatga o'tkazamiz.
+=================================
+2-topshiriq:
+Davlat ramzlari mavzusida hujjat tayyorlash.
+Bayroq, gerb, madhiya haqida ma'lumotlar bilan to'ldiramiz.
+Shunindek hujjatga rasmlar va jadval ham joylaymiz.
