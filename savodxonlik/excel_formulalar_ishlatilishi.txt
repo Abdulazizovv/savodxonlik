@@ -1,6 +1,37 @@
+Yusufxon:   	2/5
+Hasanboy:   	1/5
+To'ychiboy: 	0/5
+Shahzoda:   	0/5
+Abdulaziz:  	2/5
+MuhammadYusuf:  0/5
+Umarxon: 	    3/5
+
+
+
+
 =СУММ(B4:D10)
 =СРЗНАЧ(E5:G8)
 =МАКС(E5:G8)
-=ЕСЛИ(ПРАВСИМВ(D6)="a";"Ayol";"Erkak")
-=СЧЁТЗ(Таблица3[Dushanba])
+=ЕСЛИ(ПРАВСИМВ(D6;1)="a";"Ayol";"Erkak")
+=СЧЁТЗ(E5:G8)
 =СЧЁТЕСЛИ(N6:N15;"Ayol")
+
+berilgan oraliqdagi shartga mos kataklar
+yig'indisi
+=СУММЕСЛИ(F6:F14;10)
+
+Matnlarni birlashitirish
+=СЦЕПИТЬ(D6;" ";E6)
+
+Matnni chap tomondan kesib olish
+berilgan songa teng belgilarni
+=ЛЕВСИМВ(G17;5)
+
+Shuni o'ng tomondan kesish
+=ПРАВСИМВ(G17;10)
+
+Matndagi belgilar sonini sanaydi
+=ДЛСТР(G19)
+
+Ortiqcha bo'sh joylarni olib tashlaydi
+=ПРОПНАЧ(G19)
