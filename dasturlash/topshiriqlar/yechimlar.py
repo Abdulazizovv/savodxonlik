@@ -81,7 +81,7 @@ magazin = {
     "mahsulotlar": [
         {"nomi": "Olma", "kategoriya": "mevalar", "narxi": 15000, "sotuvdami": True},
         {"nomi": "Banan", "kategoriya": "mevalar", "narxi": 20000, "sotuvdami": True},
-        {"nomi": "Sabzi", "kategoriya": "sabzavotlar", "narxi": 10000, "sotuvdami": True},
+        {"nomi": "Sabzi", "kategoriya": "sabzavotlar", "narxi": 10000, "sotuvdami": False},
     ],
     "xodimlar": [
         {"ismi": "Abdulloh", "lavozim": "direktor", "maosh": 0},
@@ -93,24 +93,58 @@ magazin = {
 print("""
     Assalomu alaykum! Xush kelibsiz
     Oshxona boshqaruv tizimi
+""")
+
+while True:
+    print("""
     Amallar:
     1) Mahsulotlarni ko'rish
     2) Mahsulot qo'shish
     3) Mahsulot sotuvdan olib tashlash/qo'yish
     4) Xodimlarni ko'rish
     5) Xodimlarni o'chirish    
-
-""")
-
-while True:
-    print("Amalni tanlang:>")
+    Amalni tanlang:>""")
     amal = input()
 
     if amal == "1":
+        print("=" * 30)
+        print("Mahsulotlar")
         for mahsulot in magazin["mahsulotlar"]:
             if mahsulot["sotuvdami"]:
                 sotuvdami = "Sotuvda"
             else:
                 sotuvdami = "Sotuvda emas"
             print(f"{magazin["mahsulotlar"].index(mahsulot) + 1}) {mahsulot["nomi"]} - {mahsulot["narxi"]} - {sotuvdami}")
+        print("=" * 30)
+    elif amal == "2":
+        print("=" * 30)
+        print("Mahsulot qo'shish")
+        product_name = input("Mahsulot nomini kiriting:>")
+        product_price = input("Mahsulot narxini kiriting:>")
+        submit = input(f"Mahsulot nomi: {product_name}\nNarxi: {product_price}\nMa'lumotlar to'g'rimi?(h/y):>")
+        if submit == "h":
+            magazin["mahsulotlar"].append({"nomi": product_name, "kategoriya": "boshqa", "narxi": product_price, "sotuvdami": True})
+            print("Mahsulot qo'shildi!")
+            print("=" * 30)
+
+    elif amal == "3":
+        print("=" * 30)
+
+        print("Mahsulotlar")
+        for mahsulot in magazin["mahsulotlar"]:
+            if mahsulot["sotuvdami"]:
+                sotuvdami = "Sotuvda"
+            else:
+                sotuvdami = "Sotuvda emas"
+            print(f"{magazin["mahsulotlar"].index(mahsulot) + 1}) {mahsulot["nomi"]} - {mahsulot["narxi"]} - {sotuvdami}")
+        
+        product_index = int(input(f"Mahsulotni tanlang(1-{len(magazin['mahsulotlar'])})")) - 1
+
+        product = magazin["mahsulotlar"][product_index]
+
+        product["sotuvdami"] = not product["sotuvdami"]
+        print("O'zgartirildi!")
+        print("=" * 30)
+
     
+
