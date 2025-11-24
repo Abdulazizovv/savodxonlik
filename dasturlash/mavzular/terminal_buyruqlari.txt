@@ -8,3 +8,17 @@ rm -fr <papka nomi> - fayl yoki papkani butunlay o'chirish | Xushyor bo'lamiz!
 code .  - joriy papkada vscode ni ochish
 touch <faylnomi.kengaytma> - fayl yaratish
 nano <faylnomi.kengaytma> - faylni terminalda ochish| faqatgina matnli  fayllarni
+
+
+git buyruqlari
+
+git init - papka ichida gitni ishga tushurish
+git add <fayl nomi yoki .> - fayl(lar)ni tarix yozishga tayyorlash
+git commit -m "<qisqa izoh>" - commit(tarix) yaratish
+git log - tarixni ko'rish
+git status - gitning joriy holatini ko'rish
+git add origin <link> - github repozitoriya ulash
+git remote -v  - ulangan repozitoriyani tekshirish
+git config --list - git sozlamalari
+git config user.name "<username>" - gitga username sozlash
+git config user.email "<email>" - gitga email sozlash
