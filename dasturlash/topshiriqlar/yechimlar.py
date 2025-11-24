@@ -90,6 +90,7 @@ magazin = {
 }
 
 
+
 print("""
     Assalomu alaykum! Xush kelibsiz
     Oshxona boshqaruv tizimi
@@ -146,5 +147,24 @@ while True:
         print("O'zgartirildi!")
         print("=" * 30)
 
+    elif amal == "4":
+        print("=" * 30)
+        print("Xodimlar ro'yxati:")
+        for xodim in magazin["xodimlar"]:
+            print(f"{magazin['xodimlar'].index(xodim) + 1}) {xodim['ismi']} - {xodim['lavozim']} - {xodim.get('maosh', 0)} so'm")
+        print("=" * 30)
     
+    elif amal == "5":
+        print("=" * 30)
+        print("Xodimlar ro'yxati:")
+        for xodim in magazin["xodimlar"]:
+            print(f"{magazin['xodimlar'].index(xodim) + 1}) {xodim['ismi']} - {xodim['lavozim']} - {xodim.get('maosh', 0)} so'm")
+        print("=" * 30)
+        x = input(f"Xodimni tanlang(1-{len(magazin['xodimlar'])}):>")
+        if not x.isdigit():
+            print("Faqat raqam kiriting!")
+            x = input(f"Xodimni tanlang(1-{len(magazin['xodimlar'])}):>")
 
+        magazin['xodimlar'].pop(int(x) - 1)
+        print("Xodim o'chirildi")
+        print("=" * 30)
