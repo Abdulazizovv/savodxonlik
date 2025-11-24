@@ -1,0 +1,10 @@
+pwd - joriy turgan manzilimizni qaytaradi
+ls - joriya manzildagi fayl va papkalarni ko'rsatadi
+clear - terminalni tozalash
+cd <papka nomi> - papkaga kirish
+cd .. - papkadan chiqish | orqaga qaytish
+mkdir <papka nomi> - papka yaratish
+rm -fr <papka nomi> - fayl yoki papkani butunlay o'chirish | Xushyor bo'lamiz!
+code .  - joriy papkada vscode ni ochish
+touch <faylnomi.kengaytma> - fayl yaratish
+nano <faylnomi.kengaytma> - faylni terminalda ochish| faqatgina matnli  fayllarni
