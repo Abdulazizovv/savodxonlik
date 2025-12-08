@@ -31,7 +31,19 @@
 #print(jami)
 
 
-for i in range(10):
-    if i == 5:
-        break
-    print(i)
+# for i in range(10):
+#     if i == 5:
+#         break
+#     print(i)
+
+
+# pythonda while sikli
+
+# while takrorlash operatori shart rost bo'lsa, takrorlanadi
+
+# son = 0
+# while son < 10:
+#    print(son)
+#    son += 1
+#    if son == 5:
+#        break
