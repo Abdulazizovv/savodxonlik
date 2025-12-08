@@ -59,3 +59,26 @@ print("5 ning kvadrati:", square(5))
 # kvadrat funksiyasini esa square nomi bilan import qildik
 # Bu nomlar bilan funksiyalarni chaqirish mumkin
 # Bu usul nomlar to'qnashuvini oldini olish uchun foydalidir
+
+
+# Pythonda oldindan o'rnatilgan modullar
+# Pythonda ko'plab oldindan o'rnatilgan modullar mavjud
+# Masalan, os moduli operatsion tizim bilan ishlash uchun,
+# sys moduli tizim bilan bog'liq funksiyalar uchun,
+# datetime moduli sana va vaqt bilan ishlash uchun ishlatiladi
+# random moduli esa tasodifiy sonlar generatsiyasi uchun ishlatiladi
+# Ushbu modullarni import qilib, ularning funksiyalaridan foydalanish mumkin
+import os
+print("Joriy ishchi katalog:", os.getcwd())
+
+
+import datetime
+hozir = datetime.datetime.now()
+
+print("Hozirgi sana va vaqt:", hozir)
+import random
+
+tasodifiy_son = random.randint(1, 100)
+print("Tasodifiy son (1-100):", tasodifiy_son)
+# Yuqoridagi misollarda os, datetime va random modullaridan foydalanildi
+
