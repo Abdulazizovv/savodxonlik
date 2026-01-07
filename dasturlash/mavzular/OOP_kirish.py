@@ -74,11 +74,18 @@ cat = Cat("Whiskers")
 
 class Human:
     def __init__(self, name, age):
-        self.name = name
+        self._name = name
         self.age = age
+        
+    
+    def set_name(self, name):
+        self._name = name
+        
+    def get_name(self):
+        return self._name
     
     def greeting(self):
-        print(f"Salom, {self.name}")
+        print(f"Salom, {self._name}")
         
     def check_age(self, min_age=15):
         if self.age >= min_age:
@@ -114,5 +121,24 @@ student3 = Student(age=18, name="Handalak", grade=5)
 
 
 class Product:
-    def __init__(self, name, price, stock=1):
-        pass
+    def __init__(self, name: str, cost: int, stock=1, percent=20, unit="dona"):
+        self.name = name
+        self.cost = cost
+        self.stock = stock
+        self.unit = unit
+        self.price = (self.cost / 100) * 20 + self.cost
+    
+    
+    def sell(self, count=1):
+        if self.stock < count:
+            print(f"Mahsulot yetarli emas!\nYetmayabdi: {count - self.stock} {self.unit}\nMaksimum sotish mumkin: {self.stock} {self.unit}")
+            return
+        self.stock -= count
+        print(f"Mahsulot sotildi\nQoldi: {self.stock} {self.unit}")
+        
+    
+
+
+olma = Product(name="Olma", cost=5000, stock=1000, unit="kg")
+
+olma.sell(1001)
