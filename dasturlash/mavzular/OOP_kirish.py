@@ -126,7 +126,7 @@ class Product:
         self.cost = cost
         self.stock = stock
         self.unit = unit
-        self.price = (self.cost / 100) * 20 + self.cost
+        self.price = (self.cost / 100) * percent + self.cost
     
     
     def sell(self, count=1):
@@ -135,10 +135,17 @@ class Product:
             return
         self.stock -= count
         print(f"Mahsulot sotildi\nQoldi: {self.stock} {self.unit}")
+
+    
+    # mahsulotni hammasini sotganda qancha foyda olish
+    def profit(self):
+        natija = (self.price - self.cost) * self.stock
+        print(f"Agar {self.stock} {self.unit} sotilsa foyda: {natija} so'm")
+        return natija
         
     
 
 
-olma = Product(name="Olma", cost=5000, stock=1000, unit="kg")
+olma = Product(name="Olma", cost=5000, percent=200, stock=10, unit="kg")
 
-olma.sell(1001)
+foyda = olma.profit()
