@@ -148,4 +148,237 @@ class Product:
 
 olma = Product(name="Olma", cost=5000, percent=200, stock=10, unit="kg")
 
-foyda = olma.profit()
+# foyda = olma.profit()
+
+
+
+
+class Car:
+    def __init__(self, model: str, color: str, year: int, price: int):
+        self._model = model
+        self.color = color
+        self.year = year
+        self.price = price
+    
+
+
+    def info(self):
+        print("=" * 30)
+        print("Car info:")
+        print(f"Model: {self._model}")
+        print(f"Color: {self.color}")
+    
+
+    def move(self, speed=50, time=1):
+        print(f"{speed * time} km yurildi")
+        return speed * time
+
+
+class Nexia(Car):
+
+    def beep_beep(self):
+        print("Di Dit")
+
+
+class Nexia2(Nexia):
+
+    def beep_beep(self):
+        print("Bip Bip")
+
+nexia = Nexia(model="Nexia", color="Black", year=2008, price=8000)
+
+nexia2 = Nexia2(model="Nexia2", color="Blue", year=2015, price=9000)
+
+
+class Human:
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
+    
+
+class Student(Human):
+
+    def set_grades(self, grades: list):
+        self.grades = grades
+
+    def get_grades(self):
+        print("Baholari:")
+        for i in self.grades:
+            print(i)
+
+student1 = Student("Abdulloh", 13)
+
+
+
+# print("=" * 30)
+# print("Omborxona boshqaruv tizimi")
+# print("=" * 30)
+
+# class Category:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def write(self):
+#         with open("categories.txt", "a") as file:
+#             file.write(f"{self.name}\n")
+#         print("Kategoriya qo'shildi")
+
+
+# def get_categories():
+#     with open("categories.txt", "r") as file:
+#         data = file.read()
+#         return data
+
+# categories = get_categories().split("\n")
+# categories.pop()
+
+
+# class Product:
+#     def __init__(self, name: str, category: str, cost: int, unit: str, percent=20, stock=1):
+#         self.name = name
+#         self.category = category
+#         self.cost = cost
+#         self.percent = percent
+#         self.stock = stock
+#         self.unit = unit
+#         self.price = (cost // 100) * 20 + self.cost
+    
+#     def write(self):
+#         with open("products.txt", "a") as file:
+#             file.write(f"{self.name} | {self.category} | {self.cost} | {self.percent} | {self.price } | {self.stock} | {self.unit}\n")
+#         print("Mahsulot qo'shildi!")
+
+# product1 = Product("Shaftoli", "meva", 15000, "kg", 20, 150)
+
+# product1.write()
+
+# def get_products():
+#     pass
+
+# products = [
+#     ["olma", "meva", 10000, 20],
+#     []
+# ]
+
+# while True:
+#     pass
+
+
+
+
+
+# shart belgilar
+
+# > katta
+# < kichik
+# == tengmi
+# != teng emas
+# >= katta yoki teng
+# <= kichik yoki teng
+
+
+
+
+
+# DRY - DONT REPEAT YOURSELF
+# SOLID
+# KISS
+
+
+
+class User:
+    def __init__(self, name: str, age: int, gender="male"):
+        self.__name = name
+        self.age = age
+        self.gender = gender
+    
+    # getter metod
+    def get_name(self):
+        print(self.__name)
+    
+    # setter metod
+    def set_name(self, name: str):
+        self.__name = name
+
+abdulloh = User(name="Abdulloh", age=13)
+
+
+class BankAccount:
+    def __init__(self, user: User):
+        self.user = user
+        self.__balance = 0
+    
+    def withdraw(self, amount: int):
+        if self.__balance >= amount:
+            print("Pul yechildi!")
+            self.__balance -= amount
+        else:
+            print("Pul yetarli emas!")
+    
+    def deposit(self, amount: int):
+        if amount > 3000000:
+            print("Shubhali tranzaksiya")
+        else:
+            self.__balance += amount
+
+    def show_balance(self):
+        print("=" * 30)
+        print(f"{self.user.get_name()}")
+        print(f"{self.__balance} so'm")
+        print("=" * 30)
+
+
+
+account = BankAccount(user=abdulloh)
+
+
+print("=" * 30)
+print("Halol bank")
+print("=" * 30)
+while True:
+    print("Amaliyotni tanlang:")
+    print("1) Balans ko'rish")
+    print("2) Balans to'ldirish")
+    print("3) Balans yechish")
+    amaliyot = input(">>>")
+
+
+    if amaliyot == "1":
+        account.show_balance()
+    elif amaliyot == "3":
+        amount = int(input("Miqdorni kiriting:>>"))
+        account.withdraw(amount)
+    elif amaliyot == "2":
+        amount = int(input("Miqdorni kiriting:>>"))
+        account.deposit(amount)
+    else: 
+        break
+        
+
+class Payment:
+    def __init__(self):
+        pass
+    
+    def pay(self):
+        print("to'landi")
+
+class Card(Payment):
+    def __init__(self):
+        pass
+
+    def pay(self):
+        print("Plastik karta orqali to'landi")
+
+class Cash(Payment):
+    def __init__(self):
+        pass
+
+    # def pay(self):
+    #     print("Naqd pul orqali to'landi")
+
+
+a = Card()
+b = Cash()
+c = Payment()
+
+b.pay()
