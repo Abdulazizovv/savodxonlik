@@ -72,6 +72,11 @@ cat = Cat("Whiskers")
 
 
 
+
+
+
+
+
 class Human:
     def __init__(self, name, age):
         self._name = name
@@ -329,30 +334,30 @@ class BankAccount:
 
 
 
-account = BankAccount(user=abdulloh)
+# account = BankAccount(user=abdulloh)
 
 
-print("=" * 30)
-print("Halol bank")
-print("=" * 30)
-while True:
-    print("Amaliyotni tanlang:")
-    print("1) Balans ko'rish")
-    print("2) Balans to'ldirish")
-    print("3) Balans yechish")
-    amaliyot = input(">>>")
+# print("=" * 30)
+# print("Halol bank")
+# print("=" * 30)
+# while True:
+#     print("Amaliyotni tanlang:")
+#     print("1) Balans ko'rish")
+#     print("2) Balans to'ldirish")
+#     print("3) Balans yechish")
+#     amaliyot = input(">>>")
 
 
-    if amaliyot == "1":
-        account.show_balance()
-    elif amaliyot == "3":
-        amount = int(input("Miqdorni kiriting:>>"))
-        account.withdraw(amount)
-    elif amaliyot == "2":
-        amount = int(input("Miqdorni kiriting:>>"))
-        account.deposit(amount)
-    else: 
-        break
+#     if amaliyot == "1":
+#         account.show_balance()
+#     elif amaliyot == "3":
+#         amount = int(input("Miqdorni kiriting:>>"))
+#         account.withdraw(amount)
+#     elif amaliyot == "2":
+#         amount = int(input("Miqdorni kiriting:>>"))
+#         account.deposit(amount)
+#     else: 
+#         break
         
 
 class Payment:
@@ -381,4 +386,213 @@ a = Card()
 b = Cash()
 c = Payment()
 
-b.pay()
+# b.pay()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Car:
+    def __init__(self, name: str, year: int, color: str="black"):
+        self.name = name # property | xususiyat
+        self.year = year
+        self.color = color
+    
+    # metod
+    def move(self, speed: int=50):
+        print(f"{speed} km/h")
+
+    def honk(self, sound: str="beep beep"):
+        print(sound)
+
+
+# cobalt = Car("Cobalt", 2024, "White")
+
+# cobalt.move()
+# cobalt.honk()
+
+
+
+
+class Human:
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
+    
+    def move(self):
+        print("Yurish")
+    
+
+class Student(Human):
+    
+    def go_university(self):
+        print("Universitetga borish")
+    
+    def move(self):
+        print("tezroq yuryabdi")
+
+
+
+
+
+
+class BankAccount:
+    def __init__(self, user: Human):
+        self.user = user
+        self.__balance = 0
+    
+    def deposit(self, amount: int):
+        print(f"Pul mablag'i yechildi: {amount}\nQoldi: {self.__balance}")
+        self.__balance += amount
+        return amount
+    
+    def withdraw(self, amount: int):
+        if amount > self.__balance:
+            print("Yetarli mablag' mavjud emas")
+            return
+        self.__balance -= amount
+        return amount
+
+    def show_balance(self):
+        print(f"{self.user.name} balansi: {self.__balance}")
+    
+
+
+kamronbek = Human("Kamronbek", age=20)
+k_account = BankAccount(kamronbek)
+
+k_account.show_balance()
+
+
+k_account.deposit(10000)
+
+k_account.show_balance()
+
+k_account.withdraw(15000)
+
+k_account.withdraw(7000)
+
+k_account.show_balance()
+
+
+
+
+class Author:
+    def __init__(self, name: str, country: str = "Uzbekistan"):
+        self.name = name.capitalize()
+        self.country = country.capitalize()
+
+
+class Book:
+    def __init__(self, title: str, year: int, genre: str, author: Author):
+        self.author = author
+        self.title = title
+        self.year = year
+        self.genre = genre
+
+    def __str__(self):
+        return self.title + " | " + self.author.name
+
+
+class Member:
+    def __init__(self, full_name: str, age: int):
+        self.full_name = full_name
+        self.age = age
+
+
+class Library:
+    def __init__(self, name: str, members: list[Member] = [], books: list[Book] = []):
+        self.name = name.capitalize()
+        self.members = members
+        self.books = books
+
+    def add_book(self, book: Book):
+        self.books.append(book)
+
+    def get_all_books(self):
+        natija = []
+        for book in self.books:
+            natija.append([book.title, book.author.name, book.year, book.genre])
+
+        return natija
+    
+    def find_book(self, search: str):
+        natija = []
+        for book in self.get_all_books():
+            if search.lower() in book[0].lower() or search.lower() in book[1].lower():
+                natija.append(book)
+        return natija
+
+
+author1 = Author("Erkin Vohidov", "Uzbekistan")
+book1 = Book(title="Vatanim", year=2015, genre="She'r", author=author1)
+member1 = Member("Kamronbek", 19)
+
+kutubxona = Library("QamarBooks")
+
+kutubxona.add_book(book1)
+# kutubxona.add_book(book1)
+
+
+
+print(kutubxona.get_all_books())
+
+print("=" * 30)
+print(f"{kutubxona.name}ga xush kelibsiz")
+print("=" * 30)
+while True:
+
+    print()
+    print("1) Kitoblarni ko'rish")
+    print("2) Kitob qo'shish")
+    print("3) Kitob qidirish")
+    amal = input(">>>")
+
+    if amal == "1":
+        for idx, kitob in enumerate(kutubxona.get_all_books(), start=1):
+            print(f"{idx}) {kitob[0]} - {kitob[1]} | {kitob[2]} - {kitob[3]}")
+        print("=" * 30)
+
+    elif amal == "2":
+        book_name = input("Kitob nomini kiriting:>>")
+        book_year = int(input("Kitob yili?>>"))
+        book_author = input("Avtorni ismini kiriting:>>")
+        author = Author(book_author)
+        book_genre = input("Janrni kiriting:>>")
+
+        book = Book(book_name, book_year, book_genre, author)
+        kutubxona.add_book(book)
+        print("Kitob yaratildi")
+        print("=" * 30)
+
+    elif amal == "3":
+        search = input("Nimani qidiramiz?>>")
+        found_books = kutubxona.find_book(search)
+
+        if not found_books:
+            print("Hech narsa mavjud emas!")
+            continue
+        print("=" * 30)
+        print(f"topilgan kitoblar: {len(found_books)} ta")
+        for idx, kitob in enumerate(found_books, start=1):
+            print(f"{idx}) {kitob[0]} - {kitob[1]} | {kitob[2]} - {kitob[3]}")
+        print("=" * 30)
