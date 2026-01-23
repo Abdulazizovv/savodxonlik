@@ -596,3 +596,137 @@ while True:
         for idx, kitob in enumerate(found_books, start=1):
             print(f"{idx}) {kitob[0]} - {kitob[1]} | {kitob[2]} - {kitob[3]}")
         print("=" * 30)
+
+
+
+
+# ======================== Ecommerce ====================
+class Base:
+
+    def __str__(self):
+        return self.get("name", "Obyekt")
+
+
+class Client(Base):
+    def __init__(self, name: str, phone: str=""):
+        self.name = name
+        self.phone = phone
+
+
+class Product(Base):
+    def __init__(self, name: str, price: int, stock: int):
+        self.name = name
+        self.price = price
+        self.stock = stock
+
+
+class Cart:
+    def __init__(self, client: Client):
+        self.client = client
+        self.__products = []
+    
+    def add_product(self, product, quantity: int):
+        self.__products.append([product[0], product[1], quantity, product[1] * quantity])
+
+    def get_products(self):
+        return self.__products
+
+
+class Market(Base):
+    def __init__(self, name: str, products: list[Product]=[], clients: list[Client]=[]):
+        self.name = name
+        self.products = products
+        self.clients = clients
+
+    def get_all_products(self):
+        natija = []
+        for product in self.products:
+            if product.stock > 0:
+                natija.append([product.name, product.price, product.stock])
+        return natija
+    
+    def add_product(self, product: Product):
+        self.products.append(product)
+
+market = Market("Qorabozor")
+
+
+
+def create_product():
+    name = input("Mahsulot nomini kiriting:>>")
+    price = int(input("Mahsulot narxini kiriting:>>"))
+    stock = int(input("Mahsulot sonini kiriting:>>"))
+    product = Product(name, price, stock)
+    return product
+
+
+def greeting():
+    print("=" * 30)
+    print(f"{market.name}ga xush kelibsiz")
+    print("=" * 30)
+
+
+def show_main_menu():
+    print("=" * 30)
+    print("1) Mahsulotlarni ko'rish")
+    print("2) Mahsulot qo'shish")
+    print("3) Savatchani ko'rish")
+
+def show_products(products: list):
+    print(f"Bizdagi mavjud mahsulotlar: {len(products)} ta")
+
+    for idx, product in enumerate(products, start=1):
+        print(f"{idx}) {product[0]} - {product[1]} - {product[2]}")
+    print("~" * 30)
+
+
+def register_user():
+    name = input("Ismingizni kiriting:>>")
+    user = Client(name)
+    return user
+
+
+
+def main():
+    greeting()
+    client = register_user()
+
+    card = Cart(client)
+
+    while True:
+
+        show_main_menu()
+
+        amal = input(">>>")
+
+        if amal == "1":
+            products = market.get_all_products()
+            if not products:
+                print("Mahsulotlar mavjud emas!")
+                continue
+            show_products(products)
+            print("Orqaga qaytish uchun 0 ni yuboring")
+            selectec_product_index = int(input(">>>"))
+
+            if selectec_product_index == 0:
+                continue
+
+            product = products[selectec_product_index - 1]
+            quantity = int(input(f"Miqdorini kiriting(max:{product[2]})>>"))
+            card.add_product(product, quantity)
+            print("Mahsulot qo'shildi")
+            print("Davom eting")
+
+
+        elif amal == "2":
+            product = create_product()
+            market.add_product(product)
+            print("Mahsulot yaratildi")
+            print("=" * 30)
+
+        elif amal == "3":
+            products = card.get_products()
+            show_products(products)
+
+
+main()
