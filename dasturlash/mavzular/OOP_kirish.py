@@ -730,3 +730,22 @@ def main():
 
 
 main()
+
+
+# ========================= Dekoratorlar ===========================
+
+
+def my_decorator(func):
+    def wrapper():
+        print("Funksiyadan oldingi ishlar")
+        func()
+        print("FUnksiyadan keyingi ishlar")
+    return wrapper
+
+
+@my_decorator
+def my_func():
+    print("My func")
+
+
+my_func()
