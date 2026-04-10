@@ -19,7 +19,7 @@ def main():
     while True:
         print(limit + 1, "urinish qoldi")
         son = son_ol()
-        while 0 < son or son > 10:
+        while son > 10:
             son = son_ol("Faqat 1 va 10 oralig'ida son kiriting>>")
         
         if ss > son:
